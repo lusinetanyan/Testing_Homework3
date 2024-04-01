@@ -55,6 +55,9 @@ public class NumberAnalyzer {
             return 0;
         }
 
+        a = Math.abs(a);
+        b = Math.abs(b);
+
         int max = Math.max(a, b);
 
         for (int lcm = max; ; lcm += max) {
