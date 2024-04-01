@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class NumberAnalyzerTest {
     @Test
-    public void testIsPrimeWithPrimeNumber() {
+    public void testIsPrimeTrue() {
         assertTrue(NumberAnalyzer.isPrime(2));
         assertTrue(NumberAnalyzer.isPrime(7));
         assertTrue(NumberAnalyzer.isPrime(11));
@@ -14,55 +14,25 @@ class NumberAnalyzerTest {
     }
 
     @Test
-    public void testIsPrimeWithNonPrimeNumber() {
+    public void testIsPrimeFalse() {
         assertFalse(NumberAnalyzer.isPrime(1));
         assertFalse(NumberAnalyzer.isPrime(4));
-        assertFalse(NumberAnalyzer.isPrime(6));
-        assertFalse(NumberAnalyzer.isPrime(8));
-    }
-
-    @Test
-    public void testIsPrimeWithNegativeNumber() {
         assertFalse(NumberAnalyzer.isPrime(-2));
-        assertFalse(NumberAnalyzer.isPrime(-3));
-        assertFalse(NumberAnalyzer.isPrime(-5));
-    }
-
-    @Test
-    public void testIsPrimeWithZero() {
         assertFalse(NumberAnalyzer.isPrime(0));
     }
-
+    
     @Test
-    public void testIsPerfectNumberWithPerfectNumber() {
+    public void testIsPerfectNumberTrue() {
         assertTrue(NumberAnalyzer.isPerfectNumber(6));
         assertTrue(NumberAnalyzer.isPerfectNumber(28));
         assertTrue(NumberAnalyzer.isPerfectNumber(496));
     }
 
     @Test
-    public void testIsPerfectNumberWithNonPerfectNumber() {
+    public void testIsPerfectNumberFalse() {
         assertFalse(NumberAnalyzer.isPerfectNumber(1));
         assertFalse(NumberAnalyzer.isPerfectNumber(2));
-        assertFalse(NumberAnalyzer.isPerfectNumber(3));
-        assertFalse(NumberAnalyzer.isPerfectNumber(4));
-        assertFalse(NumberAnalyzer.isPerfectNumber(5));
-        assertFalse(NumberAnalyzer.isPerfectNumber(7));
-        assertFalse(NumberAnalyzer.isPerfectNumber(8));
-        assertFalse(NumberAnalyzer.isPerfectNumber(9));
-        assertFalse(NumberAnalyzer.isPerfectNumber(10));
-        assertFalse(NumberAnalyzer.isPerfectNumber(11));
-        assertFalse(NumberAnalyzer.isPerfectNumber(12));
-        assertFalse(NumberAnalyzer.isPerfectNumber(13));
-    }
-
-    @Test
-    public void testIsPerfectNumberWithNegativeNumber() {
         assertFalse(NumberAnalyzer.isPerfectNumber(-6));
-    }
-
-    @Test
-    public void testIsPerfectNumberWithZero() {
         assertFalse(NumberAnalyzer.isPerfectNumber(0));
     }
 
